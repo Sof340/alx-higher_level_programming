@@ -12,7 +12,7 @@ def argument_output():
         i = 1
         print("{} arguments:".format(len(argv) - 1))
         while (i < len(argv)):
-            print("{}i: {}".format(i, argv[i]))
+            print("{}: {}".format(i, argv[i]))
             i += 1
 
 
