@@ -7,7 +7,7 @@ def argument_output():
         print("0 arguments.")
     elif (len(argv) == 2):
         print("1 argument:")
-        print("1 : {}".format(argv[1]))
+        print("1: {}".format(argv[1]))
     else:
         i = 1
         print("{} arguments:".format(len(argv) - 1))
