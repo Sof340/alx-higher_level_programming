@@ -1,16 +1,15 @@
 #!/usr/bin/python3
 from calculator_1 import mul, div, add, sub
-from sys import argv
+from sys import argv, exit
 
 
 def calculatrice():
     if (len(argv) != 4):
-        print(argv)
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        return 1
-    if (argv[2] != '*' or '/' or '+' or '-'):
+        exit(1)
+    if (argv[2] not in "*/+-"):
         print("Unknown operator. Available operators: +, -, * and /")
-        return 1
+        exit(1)
     a = int(argv[1])
     b = int(argv[3])
     if (argv[2] == '*'):
