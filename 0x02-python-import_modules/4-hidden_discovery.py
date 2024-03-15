@@ -9,7 +9,8 @@ def print_compiled_words():
         k = words[i]
         if (k[0] != '_'):
             to_print.append(k)
-    print(to_print)
+    for i in range(len(to_print)):
+        print(to_print[i])
 
 
 if __name__ == "__main__":
