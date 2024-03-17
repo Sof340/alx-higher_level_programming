@@ -2,14 +2,11 @@
 
 
 def no_c(my_string):
-    str_list = list(my_string)
-    a = str_list.count("c")
-    b = str_list.count("C")
-    while (a > 0):
-        str_list.remove("c")
-        a -= 1
-    while (b > 0):
-        str_list.remove("C")
-        b -= 1
-    my_string = ''.join(str_list)
-    return my_string
+    new_list = []
+    for c in my_string:
+        if (c == "c" or c == "C"):
+            continue
+        else:
+            new_list.append(c)
+    new_string = ''.join(new_list)
+    return new_string
