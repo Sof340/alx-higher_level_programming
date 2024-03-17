@@ -2,11 +2,10 @@
 
 
 def no_c(my_string):
-    new_list = []
+    new_string = ""
     for c in my_string:
         if (c == "c" or c == "C"):
             continue
         else:
-            new_list.append(c)
-    new_string = ''.join(new_list)
+            new_string += c
     return new_string
