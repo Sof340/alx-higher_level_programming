@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include "lists.h"
-
+/**
+ * is_palindrome - checks if a singly linked list is a palindrome.
+ * @head: pointer to pointer of first node of listint_t list.
+ * Return: 0 if false, 1 if true.
+ */
 
 int is_palindrome(listint_t **head)
 {
 	if (*head == NULL)
-		return (0);
+		return (1);
 	freopen("/dev/null", "w", stdout);
 
 	int size = print_listint(*head);
@@ -13,7 +17,7 @@ int is_palindrome(listint_t **head)
 	freopen("/dev/tty", "w", stdout);
 
 	if (size == 0)
-		return (0);
+		return (1);
 	int array[size];
 
 	int i;
@@ -39,3 +43,4 @@ int is_palindrome(listint_t **head)
 	}
 	return (1);
 }
+
