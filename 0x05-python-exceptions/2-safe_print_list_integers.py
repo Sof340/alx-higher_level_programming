@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def safe_print_list_integers(my_list=[], x=0):
     try:
         i = count = 0
@@ -9,5 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 count += 1
         print()
         return count
-    except IndexError:
+    except Exception:
         raise
