@@ -3,7 +3,7 @@
 def magic_calculation(a, b):
   """Performs a magic calculation based on input values and loops."""
   result = 0
-  for i in range(1, 3):
+  for i in range(1, 2):
     try:
       if i > a:
         raise Exception("Too far")
