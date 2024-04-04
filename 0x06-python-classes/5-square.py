@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines a Square class with
-private instance attribute using properties.
+This module defines a Square class with private
+instance attribute using properties.
 """
 
 
@@ -59,3 +59,15 @@ class Square:
             int: The area of the square.
         """
         return self.__size ** 2
+
+    def my_print(self):
+        """
+        Prints the square using '#' characters.
+
+        If size is 0, prints an empty line.
+        """
+        if self.__size == 0:
+            print()
+            return
+        for _ in range(self.__size):
+            print("#" * self.__size)
