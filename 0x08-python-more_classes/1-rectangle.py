@@ -40,7 +40,7 @@ class Rectangle:
             else:
                 self.__width = value
         except Exception as e:
-            print("{}".format(e))
+            print("[{}] {}".format(e.__class__.__name__, e))
 
     @property
     def height(self):
@@ -57,4 +57,4 @@ class Rectangle:
             else:
                 self.__height = value
         except Exception as e:
-            print("{}".format(e))
+            print("[{}] {}".format(e.__class__.__name__, e))
