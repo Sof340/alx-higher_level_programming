@@ -1,0 +1,88 @@
+===============================
+ How to Use doctest_in_help.py
+===============================
+
+This library is very simple, since it only has one function called
+``add_integer()``.
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+works with only one argument.
+
+::
+	>>> add_integer(5)
+	103
+
+works with two arguments.
+
+::
+
+	>>> add_integer(5,6)
+	11
+
+works whan only a float is given.
+
+::
+
+	>>> add_integer(5.6)
+	103
+
+works when a is a float and b an integer.
+
+::
+
+	>>> add_integer(5.6, 5)
+	10
+
+work when one of the arguments is negative or both are.
+
+::
+
+	>>> add_integer(-5, 5)
+	0
+
+raise a type error when an argument is not integer or float.
+
+::
+
+	>>> add_integer(-5, "life")
+	Traceback (most recent call last):
+  		File "<stdin>", line 1, in <module>
+  		File "<stdin>", line 8, in add_integer
+	TypeError: b must be an integer
+
+same with none.
+
+::
+
+	>>> add_integer(-5, "life")
+	Traceback (most recent call last):
+  		File "<stdin>", line 1, in <module>
+  		File "<stdin>", line 8, in add_integer
+	TypeError: b must be an integer
+
+when no argument are given missing element error is raised.
+
+::
+
+	>>> add_integer()
+	Traceback (most recent call last):
+  		File "<stdin>", line 1, in <module>
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+when more than 2 arguments are given an error ocurs.
+
+::
+
+	>>> add_integer(3, 4 , 5)
+	Traceback (most recent call last):
+  		File "<stdin>", line 1, in <module>
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
