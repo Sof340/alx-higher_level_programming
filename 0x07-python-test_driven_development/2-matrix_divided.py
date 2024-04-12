@@ -11,11 +11,11 @@ def matrix_divided(matrix, div):
         matrix: a matrice of matrices.
         div: given value to divide by.
     '''
+    m = "matrix must be a matrix (list of lists) of integers/floats"
     for item in matrix:
         for number in item:
             if not isinstance(number, (int, float)):
-                raise TypeError('''matrix must be a matr
-                        ix (list of lists) of integers/floats''')
+                raise TypeError(m)
     sub_matrix_lengths = [len(sub_matrix) for sub_matrix in matrix]
     if (min(sub_matrix_lengths) != max(sub_matrix_lengths)):
         raise TypeError("Each row of the matrix must have the same size")
