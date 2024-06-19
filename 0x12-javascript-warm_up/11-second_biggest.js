@@ -9,6 +9,8 @@ if (isNaN(parseInt(args[0])) || args.length === 1) {
     if (first < parseInt(args[x])) {
       second = first;
       first = parseInt(args[x]);
+    } else if (second < parseInt(args[x])) {
+      second = parseInt(args[x]);
     }
   }
   if (isNaN(second)) {
