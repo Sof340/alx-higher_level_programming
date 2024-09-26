@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-
 """
-This script takes your GitHub credentials (username
-and password) and uses the GitHub API to display your id.
+this script takes 2 arguments in order to solve
+the challenge.
 """
 
 
@@ -22,4 +21,4 @@ if __name__ == "__main__":
         user_data = response.json()
         print(user_data['id'])
     else:
-        print("None")
+        print("Failed to retrieve data")
